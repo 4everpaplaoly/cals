@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F0E6"
+    android:orientation="vertical"
+    tools:context=".ReportActivity">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/reportTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/rounded_textview"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:text="10/30"
+                android:textColor="#535F52"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weekKcalMsg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:text="이번 주 평균"
+                android:textColor="#535F52"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/reportTextView" />
+
+            <TextView
+                android:id="@+id/avgKcalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:text="0"
+                android:textColor="#8C5555"
+                android:textSize="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weekKcalMsg1" />
+
+            <TextView
+                android:id="@+id/weekKcalMsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:text="kcal\n먹었어요"
+                android:textAlignment="center"
+                android:textColor="#535F52"
+                android:textSize="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/avgKcalTextView" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/weekNutrientChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weekKcalMsg2"
+                tools:ignore="MissingClass" />
+
+            <ImageView
+                android:id="@+id/weekCheckIcon"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/check_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/weekNutrientChart" />
+
+            <TextView
+                android:id="@+id/recommendedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:text="이렇게 하면 좋아요"
+                android:textSize="30dp"
+                android:textColor="#535F52"
+                app:layout_constraintBottom_toBottomOf="@id/weekCheckIcon"
+                app:layout_constraintStart_toEndOf="@id/weekCheckIcon"
+                app:layout_constraintTop_toTopOf="@id/weekCheckIcon" />
+
+            <TextView
+                android:id="@+id/recommdedDetailTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kopubworld_dotum_pro_medium"
+                android:textColor="#535F52"
+                android:text=""
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="@id/recommendedTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recommendedTextView" />
+
+            <ImageView
+                android:id="@+id/weekXIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/x_img"
+                app:layout_constraintEnd_toEndOf="@id/weekCheckIcon"
+                app:layout_constraintStart_toStartOf="@id/weekCheckIcon"
+                app:layout_constraintTop_toBottomOf="@id/weekCheckIcon" />
+
+            <TextView
+                android:id="@+id/notRecommededTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:text="이건 피해 주세요"
+                android:textSize="30dp"
+                android:textColor="#535F52"
+                app:layout_constraintBottom_toBottomOf="@id/weekXIcon"
+                app:layout_constraintStart_toEndOf="@id/weekXIcon"
+                app:layout_constraintTop_toTopOf="@id/weekXIcon" />
+
+            <TextView
+                android:id="@+id/notRecommendedTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kopubworld_dotum_pro_medium"
+                android:text=""
+                android:textSize="15dp"
+                android:textColor="#535F52"
+                app:layout_constraintStart_toStartOf="@id/notRecommededTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notRecommededTextView" />
+
+            <TextView
+                android:id="@+id/montlyRecordsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:layout_marginTop="16dp"
+                android:text="지금까지의 월별 기록을 \n 확인할 수 있어요"
+                android:textSize="30dp"
+                android:textAlignment="center"
+                android:textColor="#535F52"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/notRecommendedTextView" />
+
+            <WebView
+                android:id="@+id/googleCalendarView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="#C0D3BD"
+                app:layout_constraintTop_toBottomOf="@id/montlyRecordsTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F0E6"
+        android:fontFamily="@font/kopubworld_dotum_pro_bold"
+        app:itemIconTint="@color/nav_item_color_selector"
+        app:itemTextColor="@color/nav_item_color_selector"
+        app:menu="@menu/bottom_nav"
+        app:itemRippleColor="@color/nav_item_color_selector"
+        app:labelVisibilityMode="labeled" />
+
+</LinearLayout>

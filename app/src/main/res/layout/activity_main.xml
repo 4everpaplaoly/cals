@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F0E6"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/todayTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:background="@drawable/rounded_textview"
+                android:text="10/30"
+                android:textSize="30dp"
+                android:textColor="#535F52"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dailyKcalMsg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="오늘 하루 총"
+                android:textColor="#535F52"
+                android:textSize="30dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/todayTextView" />
+
+            <TextView
+                android:id="@+id/kcalTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="0"
+                android:textColor="#8C5555"
+                android:textSize="50dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dailyKcalMsg1" />
+
+            <TextView
+                android:id="@+id/dailyKcalMsg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kcal\n먹었어요"
+                android:textAlignment="center"
+                android:textColor="#535F52"
+                android:textSize="30dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/kcalTextView" />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/dailyNutrientChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dailyKcalMsg2"
+                tools:ignore="MissingClass" />
+
+            <TextView
+                android:id="@+id/emptyMealTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="아직 식단이 없습니다.\n식단을 추가해 보세요."
+                android:textAlignment="center"
+                android:textColor="#535F52"
+                android:textSize="30dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dailyNutrientChart" />
+
+            <Button
+                android:id="@+id/addMealBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="식단 추가하기"
+                android:textColor="#8C5555"
+                android:textSize="30dp"
+                android:fontFamily="@font/kopubworld_dotum_pro_bold"
+                android:elevation="0dp"
+                android:padding="0dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emptyMealTextView"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- ✅ 하단 내비게이션 바 -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F8F0E6"
+        android:fontFamily="@font/kopubworld_dotum_pro_bold"
+        app:itemIconTint="@color/nav_item_color_selector"
+        app:itemTextColor="@color/nav_item_color_selector"
+        app:menu="@menu/bottom_nav"
+        app:itemRippleColor="@color/nav_item_color_selector"
+        app:labelVisibilityMode="labeled"
+        />
+
+</LinearLayout>
