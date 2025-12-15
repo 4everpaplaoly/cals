@@ -37,3 +37,7 @@ Kotlin 기반 Android Studio 프로젝트입니다.
   <img src="screenshots/report.png" width="18%" />
   <img src="screenshots/calander.png" width="18%" />
 </p>
+
+--
+## 🎬 앱 시연 영상
+
