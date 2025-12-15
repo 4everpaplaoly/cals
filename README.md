@@ -49,4 +49,3 @@ Kotlin 기반 Android Studio 프로젝트입니다.
 <p align="center">
   ▶ 이미지를 클릭하면 앱 시연 영상이 재생됩니다
 </p>
-🔎 설명
