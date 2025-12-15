@@ -40,4 +40,13 @@ Kotlin 기반 Android Studio 프로젝트입니다.
 
 --
 ## 🎬 앱 시연 영상
+<p align="center">
+  <a href="videos/demo.webm">
+    <img src="screenshots/home.png" width="65%" />
+  </a>
+</p>
 
+<p align="center">
+  ▶ 이미지를 클릭하면 앱 시연 영상이 재생됩니다
+</p>
+🔎 설명
