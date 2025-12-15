@@ -30,17 +30,10 @@ Kotlin 기반 Android Studio 프로젝트입니다.
 ---
 ## 📸 앱 스크린샷
 
-### 홈 화면
-![홈](screenshots/home.png)
-
-### 음식 검색
-![검색](screenshots/gallery.png)
-
-### 음식 촬영
-![촬영](screenshots/camera.png)
-
-### 주간 리포트
-![리포트](screenshots/report.png)
-
-### 주간 리포트 - 2
-![리포트2](screenshots/calander.png)
+<p align="center">
+  <img src="screenshots/home.png" width="18%" />
+  <img src="screenshots/gallery.png" width="18%" />
+  <img src="screenshots/camera.png" width="18%" />
+  <img src="screenshots/report.png" width="18%" />
+  <img src="screenshots/calander.png" width="18%" />
+</p>
